@@ -43,13 +43,11 @@ class ChatController extends GetxController {
         text: message,
         time: DateTime.now().toString(),
         read: false));
-    update();
   }
 
   void fetchMyFriend() {
     var res = _userService.getMyFriend();
     friendList.assignAll(res);
     friendList.shuffle();
-    update();
   }
 }
